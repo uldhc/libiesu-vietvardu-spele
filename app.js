@@ -57,7 +57,7 @@
     "latviešu": "Latvian",
     "Savieno vietvārdus lībiešu un latviešu valodā. Atklāj lībiešu vietvārdu mantojumu!": "Match place names in Livonian and Latvian. Discover the heritage of Livonian place names!",
     "Sākt spēli": "Start game",
-    "Kā tas darbojas?": "How does it work?",
+    "Kā spēlēt?": "How to play?",
     "Izvēlies vietvārdu": "Choose a place name",
     "Izvēlies lībiešu vietvārdu no kreisās kolonnas.": "Choose a Livonian place name from the left column.",
     "Savieno nosaukumus": "Match the names",
