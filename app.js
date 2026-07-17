@@ -57,7 +57,7 @@
     "latviešu": "Latvian",
     "Savieno vietvārdus lībiešu un latviešu valodā. Atklāj lībiešu vietvārdu mantojumu!": "Match place names in Livonian and Latvian. Discover the heritage of Livonian place names!",
     "Sākt spēli": "Start game",
-    "Kā spēlēt?": "How to play?",
+    "Kā tas darbojas?": "How does it work?",
     "Izvēlies vietvārdu": "Choose a place name",
     "Izvēlies lībiešu vietvārdu no kreisās kolonnas.": "Choose a Livonian place name from the left column.",
     "Savieno nosaukumus": "Match the names",
@@ -223,9 +223,16 @@
     start: $("#screen-start"), game: $("#screen-game"),
     round: $("#screen-round"), final: $("#screen-final"),
   };
+  function resetPageScroll() {
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }
   function showScreen(name) {
     Object.values(screens).forEach(s => s.classList.add("hidden"));
     screens[name].classList.remove("hidden");
+    resetPageScroll();
+    requestAnimationFrame(resetPageScroll);
   }
 
   function setTheme(t) {
@@ -1256,8 +1263,8 @@
   function resultShareText() {
     const gameUrl = `${location.href.split("#")[0]}${IS_EN ? "#en" : ""}`;
     return IS_EN
-      ? `I discovered Latvian place names in Livonian and scored ${state.score} points! 🦾 Can you do better? 🎯 #livonianplacenames🇸🇱 \n${gameUrl}`
-      : `Es iepazinu Latvijas vietvārdus lībiešu valodā un ieguvu ${state.score} punktus! 🦾 Vai Tu vari labāk? 🎯 #libiesuvietvardi🇸🇱 \n${gameUrl}`;
+      ? `🗺️ I discovered Latvian place names in Livonian and scored ${state.score} points! ✨ Can you do better? 🎯\n${gameUrl}`
+      : `Lībiešu vietvārdu spēle! 🇸🇱 Es iepazinu Latvijas vietvārdus lībiešu valodā un ieguvu ${state.score} punktus! 🦾 Vai Tu vari labāk? 🎯 #libiesuvietvardi\n${gameUrl}`;
   }
 
   async function copyShareText(text) {
