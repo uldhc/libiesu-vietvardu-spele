@@ -1264,7 +1264,7 @@
     const gameUrl = `${location.href.split("#")[0]}${IS_EN ? "#en" : ""}`;
     return IS_EN
       ? `I discovered Latvian place names in Livonian and scored ${state.score} points! 🦾 Can you do better? 🎯 #LivonianPlacenames🇸🇱\n${gameUrl}`
-      : `Es iepazinu Latvijas vietvārdus lībiešu valodā un ieguvu ${state.score} punktus! 🦾 Vai Tu vari labāk? 🎯 #libiesuvietvardi🇸🇱\n${gameUrl}`;
+      : `Es iepazinu Latvijas vietvārdus lībiešu valodā un ieguvu ${state.score} punktus! 🦾 Vai Tu vari labāk? 🎯 #lībiešuvietvārdi🇸🇱\n${gameUrl}`;
   }
 
   async function copyShareText(text) {
